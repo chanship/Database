@@ -107,7 +107,11 @@ remaining points in order(#4,#5,#6,#7,#8).
 Then find out if the two polygons disjoint - yes/no
 https://postgis.net/docs/ST_Disjoint.html
 
-![disjoint](https://github.com/chanship/Database/blob/master/spatialDB/disjoint.jpg)
+[checkDisjoint_code](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.java)
+
+![checkDisjoint](https://github.com/chanship/Database/blob/master/spatialDB/checkDisjoint.sql)
+
+[checkDisjoint_kml](https://github.com/chanship/Database/blob/master/spatialDB/usc_upc_convexhull_and_disjoint.kml)
 
 5. compute a set of latitude-longitude coordinates that lie along a Epitrochoid curve.(in KML)
 Based on certain location, generate a set of latitude-longitude coordinates that lie 
@@ -119,6 +123,7 @@ Parametric Equations: (a = 5, b = 3, c = 5)
 x = (a + b) cos(t) - c cos((a/b + 1)t),
 y = (a + b) sin(t) - c sin((a/b + 1)t)
 ```
+[epitrochoid_code](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.java)
 
 ![epitrochoid](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.jpg)
 
@@ -128,15 +133,6 @@ y = (a + b) sin(t) - c sin((a/b + 1)t)
 * [GCP](https://cloud.google.com/sql/docs/postgres/quickstart) - Postgres DB environment
 * [PostGIS](https://postgis.net/) - PostGIS library for spatial database engine
 
-## Issues
-
-In order to run ST_Disjoint query(inputs are points, lines -> polygons), there are many related functions for
-parsing/processing geometric data from PostGIS. (ST_MakeLine, ST_StartPoint -> ST_AddPoint ->
-ST_MakePolygon). In addition, for exporting kml format result, functions such as ST_GeomFromText,
-ST_Collect are additionally used. For drawing/making polygons on google map, their consisting points are to
-be ordered appropriately for having no self-crossing figure. I think that SQL-based geometrical analyzing
-method looks really efficient compare to raw-level processing based on program (other data-structure or
-algorithms).
 
 
 
