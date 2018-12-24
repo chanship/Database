@@ -33,7 +33,7 @@ Num | Entity | Relationship   | Connectivity | Entity
 15 | CONTRACT | is paid by | 1:1 | PAYMENT
 16 | POST | is made with | 0:N | CONTRACT
 
-![ER Diagram](https://github.com/chanship/Database/tree/master/data_modeling(ER_Diagram)/er-diagram-shome.png)
+![ER-Diagram](https://github.com/chanship/Database/blob/master/data_modeling(ER_Diagram)/er-diagram-shome.png)
 
 ## 2. SQL
 - based on MySQL
