@@ -109,7 +109,7 @@ https://postgis.net/docs/ST_Disjoint.html
 
 [checkDisjoint_code](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.java)
 
-![checkDisjoint](https://github.com/chanship/Database/blob/master/spatialDB/checkDisjoint.sql)
+![Disjoint](https://github.com/chanship/Database/blob/master/spatialDB/disjoint.jpg)
 
 [checkDisjoint_kml](https://github.com/chanship/Database/blob/master/spatialDB/usc_upc_convexhull_and_disjoint.kml)
 
