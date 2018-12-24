@@ -43,21 +43,32 @@ A database for a social networking application consists of the following tables:
 1. List the USER_ID, FNAME, LNAME of friends of the user whose id is 5.
 ![Q1](https://github.com/chanship/Database/blob/master/SQL_dml/Q1_explain.png)
 
+[Q1_SQL](https://github.com/chanship/Database/blob/master/SQL_dml/q1.sql)
+
 2. List the USER_ID, FNAME, LNAME, GENDER, DAY_OF_BIRTH of all pending friends (usersthat invited this user as friend but have not yet been accepted) of the user whose id is 1.
 ![Q2](https://github.com/chanship/Database/blob/master/SQL_dml/Q2_explain.png)
+
+[Q2_SQL](https://github.com/chanship/Database/blob/master/SQL_dml/q2.sql)
 
 3. List the USER_ID, FNAME, LNAME of female mutual friends between users 1 and 2.
 ![Q3](https://github.com/chanship/Database/blob/master/SQL_dml/Q3_explain.png)
 
+[Q3_SQL](https://github.com/chanship/Database/blob/master/SQL_dml/q3.sql)
+
 4. List the USER_ID of female users who were born after ‘1990-12-20’ and commented on posts ofUSER_ID=10. Show their friends count in a separate column.
 ![Q4](https://github.com/chanship/Database/blob/master/SQL_dml/Q4_explain.png)
+
+[Q4_SQL](https://github.com/chanship/Database/blob/master/SQL_dml/q4.sql)
 
 5. List the user ids of up to 10 pairs of users where their distances are exactly 2 (i.e., they do not havedirect friendship and share at least one common friend).
 ![Q5](https://github.com/chanship/Database/blob/master/SQL_dml/Q5_explain.png)
 
+[Q5_SQL](https://github.com/chanship/Database/blob/master/SQL_dml/q5.sql)
+
 6. List the user ids of up to 10 pairs of users where one is male and the other is female, and eachcomments on the other’s posts at least 5 times.
 ![Q6](https://github.com/chanship/Database/blob/master/SQL_dml/Q6_explain.png)
 
+[Q6_SQL](https://github.com/chanship/Database/blob/master/SQL_dml/q6.sql)
 
 ## 3. Spatial Database
 
@@ -123,9 +134,11 @@ Parametric Equations: (a = 5, b = 3, c = 5)
 x = (a + b) cos(t) - c cos((a/b + 1)t),
 y = (a + b) sin(t) - c sin((a/b + 1)t)
 ```
-[epitrochoid_code](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.java)
+[epitrochoid_generation_code](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.java)
 
 ![epitrochoid](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.jpg)
+
+[epitrochoid_kml](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.kml)
 
 ## Built With
 
