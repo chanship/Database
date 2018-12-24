@@ -33,7 +33,7 @@ Num | Entity | Relationship   | Connectivity | Entity
 15 | CONTRACT | is paid by | 1:1 | PAYMENT
 16 | POST | is made with | 0:N | CONTRACT
 
-
+![ER Diagram](https://github.com/chanship/Database/tree/master/data_modeling(ER_Diagram)/er-diagram-shome.png)
 
 ## 2. SQL
 - based on MySQL
@@ -41,22 +41,22 @@ Num | Entity | Relationship   | Connectivity | Entity
 A database for a social networking application consists of the following tables:USERS (USER_ID, FNAME, LNAME, GENDER, DATE_OF_BIRTH)FRIENDSHIPS (INVITER_ID, INVITEE_ID, STATUS)POSTS (POST_ID, USER_ID, TEXT)COMMENTS (COMMENT_ID, POST_ID, USER_ID, TEXT)The primary key for each table is bolded.
 
 1. List the USER_ID, FNAME, LNAME of friends of the user whose id is 5.
-
+![Q1](https://github.com/chanship/Database/blob/master/SQL_dml/Q1_explain.png)
 
 2. List the USER_ID, FNAME, LNAME, GENDER, DAY_OF_BIRTH of all pending friends (usersthat invited this user as friend but have not yet been accepted) of the user whose id is 1.
-
+![Q2](https://github.com/chanship/Database/blob/master/SQL_dml/Q2_explain.png)
 
 3. List the USER_ID, FNAME, LNAME of female mutual friends between users 1 and 2.
-
+![Q3](https://github.com/chanship/Database/blob/master/SQL_dml/Q3_explain.png)
 
 4. List the USER_ID of female users who were born after ‘1990-12-20’ and commented on posts ofUSER_ID=10. Show their friends count in a separate column.
-
+![Q4](https://github.com/chanship/Database/blob/master/SQL_dml/Q4_explain.png)
 
 5. List the user ids of up to 10 pairs of users where their distances are exactly 2 (i.e., they do not havedirect friendship and share at least one common friend).
-
+![Q5](https://github.com/chanship/Database/blob/master/SQL_dml/Q5_explain.png)
 
 6. List the user ids of up to 10 pairs of users where one is male and the other is female, and eachcomments on the other’s posts at least 5 times.
-
+![Q6](https://github.com/chanship/Database/blob/master/SQL_dml/Q6_explain.png)
 
 
 ## 3. Spatial Database
@@ -81,8 +81,6 @@ https://www.google.com/earth/download/gep/agree.html
 ## Running the tests
 
 1. You need to create/generate a set of [latitude,longitude] spatial coordinations for 10 locations.
-You can get the coordinates by using Google Maps. Select any point and right click then choose "What's here?"
-
 
 2. KML is a map-oriented file format, with XML tags. Each location you surveyed will be a 'placemark' in your
 .kml file(specified using coords and labels)
@@ -96,16 +94,20 @@ You can get the coordinates by using Google Maps. Select any point and right cli
 		</Point>
 	</Placemark>
 ```
+![usc_upc_campus_10points](https://github.com/chanship/Database/blob/master/spatialDB/usc_upc_campus_10points.jpg)
 
 3. Compute the convex hull for 10 points using Postgres with PostGIS functions.
 * Convex Hull : the smallest convex polygon that contains the point set
 http://mathworld.wolfram.com/ConvexHull.html
+![convexhull](https://github.com/chanship/Database/blob/master/spatialDB/convexhull.jpg)
+
 
 4. Create a polygon using points #1,#2,#3,#9,#10(in that order), and another polygon with  the 
 remaining points in order(#4,#5,#6,#7,#8). 
 Then find out if the two polygons disjoint - yes/no
 https://postgis.net/docs/ST_Disjoint.html
 
+![disjoint](https://github.com/chanship/Database/blob/master/spatialDB/disjoint.jpg)
 
 5. compute a set of latitude-longitude coordinates that lie along a Epitrochoid curve.(in KML)
 Based on certain location, generate a set of latitude-longitude coordinates that lie 
@@ -118,7 +120,7 @@ x = (a + b) cos(t) - c cos((a/b + 1)t),
 y = (a + b) sin(t) - c sin((a/b + 1)t)
 ```
 
-![epitrochoid](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.png)
+![epitrochoid](https://github.com/chanship/Database/blob/master/spatialDB/epitrochoid.jpg)
 
 ## Built With
 
